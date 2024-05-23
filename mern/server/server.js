@@ -9,6 +9,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/record", records);
 
+// Serve static files
+app.use(express.static('../client/dist'));
+
 // start the Express server
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
